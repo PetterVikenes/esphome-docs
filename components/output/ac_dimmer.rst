@@ -25,8 +25,25 @@ for example the `RobotDyn dimmer
     :width: 50.0%
 
     RobotDyn Module. Image by `RobotDyn`_
-
 .. _RobotDyn: https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html
+
+    RISING Interrupt (Yellow = Zero Cross, Green = Gate)
+
+.. figure:: images/ac_dimmer-scope_rising_interrupt.bmp
+    :align: center
+    :width: 50.0%
+
+    FALLING Interrupt (Yellow = Zero Cross, Green = Gate)
+
+.. figure:: images/ac_dimmer-scope_falling_interrupt.bmp
+    :align: center
+    :width: 50.0%
+
+    ANY Interrupt (Yellow = Zero Cross, Green = Gate)
+
+.. figure:: images/ac_dimmer-scope_any_inerrupt.bmp
+    :align: center
+    :width: 50.0%
 
 .. code-block:: yaml
 
