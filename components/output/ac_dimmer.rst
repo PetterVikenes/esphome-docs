@@ -35,6 +35,7 @@ for example the `RobotDyn dimmer
       - platform: ac_dimmer
         id: dimmer1
         gate_pin: D7
+        interrupt_method: falling
         zero_cross_pin:
           number: D6
           mode:
@@ -60,7 +61,12 @@ Configuration variables:
   - ``leading``: gate pin driven high until the zero cross is detected
   - ``trailing``: gate pin driven high from zero cross until dim period, this method
     is suitable for mosfet dimmers only.
+- **interrupt_method** (*Optional*): Sets zero cross interupt, can be:
 
+  - ``falling``: (default) interupt triggers at falling end of signal (Stop/Off)
+  - ``rising``: interupt triggers at rising end of signal (Start/ON)
+  - ``any``: interupt triggers at rising and falling end of signal (Start And Stop)
+  - ``change``: same as ``any``.
 - **init_with_half_cycle** (*Optional*, boolean): Will send the first full half AC cycle
   Try to use this for dimmable LED lights, it might help turning on at low brightness
   levels. On Halogen lamps it might show at initial flicker. Defaults to ``false``.
